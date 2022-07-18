@@ -22,12 +22,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.wordsapp.databinding.ActivityMainBinding
 
+
 /**
  * Main Activity and entry point for the app.
  */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    private var isLinearLayoutManager = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,4 +52,5 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+
 }
